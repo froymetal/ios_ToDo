@@ -14,6 +14,7 @@
 		3AF0FEDA26823F4700276D22 /* ToDoList2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0FED826823F4700276D22 /* ToDoList2.xcdatamodeld */; };
 		3AF0FEDC26823F4B00276D22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AF0FEDB26823F4B00276D22 /* Assets.xcassets */; };
 		3AF0FEDF26823F4B00276D22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AF0FEDD26823F4B00276D22 /* LaunchScreen.storyboard */; };
+		3AF0FEEB26826B2900276D22 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0FEEA26826B2900276D22 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3AF0FEDB26823F4B00276D22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AF0FEDE26823F4B00276D22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AF0FEE026823F4B00276D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AF0FEEA26826B2900276D22 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = View/TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		3AF0FEE8268240FF00276D22 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				3AF0FEEA26826B2900276D22 /* TableViewCell.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AF0FEEB26826B2900276D22 /* TableViewCell.swift in Sources */,
 				3AF0FED426823F4700276D22 /* ViewController.swift in Sources */,
 				3AF0FED026823F4700276D22 /* AppDelegate.swift in Sources */,
 				3AF0FEDA26823F4700276D22 /* ToDoList2.xcdatamodeld in Sources */,
