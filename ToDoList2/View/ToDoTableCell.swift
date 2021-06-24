@@ -14,7 +14,7 @@ class ToDoTableCell: UITableViewCell{
     
     var todo: Todo? {
         didSet {
-            if let todo = todo{
+            if let todo = ToDo{
                 if todo.completed == false{
                     taskNameLabel.text = todo.name
                     taskDueDate.text = String(format: "Due on %@",

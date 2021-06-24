@@ -8,7 +8,7 @@
 import Foundation
 
 class TodoListViewModel {
-    var todos = [Todo]()
+    var todos = [ToDo]()
     var count: Int{
         return todos.count
     }
@@ -17,7 +17,7 @@ class TodoListViewModel {
         self.refreshData()
     }
     
-    func todoAtIndex(_ index: Int) -> Todo {
+    func todoAtIndex(_ index: Int) -> ToDo {
         return todos[index]
     }
     
@@ -31,7 +31,7 @@ class TodoListViewModel {
         
     }
     
-    func deleteTodos(_ index: Int) -> Todo {
+    func deleteTodos(_ index: Int) -> ToDo {
         self.todos.remove(at: index)
     }
     

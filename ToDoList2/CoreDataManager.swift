@@ -13,8 +13,8 @@ class CoreDataManager {
     
     private init() {}
     
-    func completeTask(todo t: Todo, completion: @escaping(Bool) -> Void){
-        let request: NSFetchRequest <Todo> = Todo.fetchRequest()
+    func completeTask(todo t: ToDo, completion: @escaping(Bool) -> Void){
+        let request: NSFetchRequest <ToDo> = ToDo.fetchRequest()
         request.predicate = NSPredicate(format: "id = %@", t.id!.uuidString)
         do{
             let result = try
@@ -32,13 +32,13 @@ class CoreDataManager {
         }
     }
     
-    func getAlltodos() -> [Todo] {
-        let request: NSFetchRequest<Todo> = Todo.fetchRequest()
-        let firstSort = NSSortDescriptor(key: #keyPath(Todo.dueDate), ascending: true)
-        let secondSort = NSSortDescriptor(key: #keyPath(Todo.completed), ascending: true)
-        let thirdSort = NSSortDescriptor(key: #keyPath(Todo.completedDate), ascending: true)
+    func getAlltodos() -> [ToDo] {
+        let request: NSFetchRequest<ToDo> = ToDo.fetchRequest()
+        let firstSort = NSSortDescriptor(key: #keyPath(ToDo.dueDate), ascending: true)
+        let secondSort = NSSortDescriptor(key: #keyPath(ToDo.completed), ascending: true)
+        let thirdSort = NSSortDescriptor(key: #keyPath(ToDo.completedDate), ascending: true)
         request.sortDescriptors = [firstSort, secondSort, thirdSort]
-            var todos = [Todo]()
+            var todos = [ToDo]()
             do {
                 todos = try persistentContainer.viewContext.fetch(request)
             } catch let err {
@@ -48,7 +48,7 @@ class CoreDataManager {
         }
     
     func saveTodo(name: String, dueDate: Date, completion: @escaping(Bool) -> Void){
-        let todo = Todo(context: persistentContainer.viewContext)
+        let todo = ToDo(context: persistentContainer.viewContext)
         todo.name = name
         todo.dueDate = dueDate
         todo.id = UUID()
